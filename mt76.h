@@ -21,7 +21,6 @@
 #include <linux/io.h>
 #include <linux/spinlock.h>
 #include <linux/skbuff.h>
-#include <linux/leds.h>
 #include <linux/usb.h>
 #include <linux/average.h>
 #include <net/mac80211.h>
@@ -468,11 +467,6 @@ struct mt76_dev {
 	int txpower_cur;
 
 	u32 debugfs_reg;
-
-	struct led_classdev led_cdev;
-	char led_name[32];
-	bool led_al;
-	u8 led_pin;
 
 	u8 csa_complete;
 
